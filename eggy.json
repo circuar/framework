@@ -1,0 +1,12 @@
+{
+    "projectName": "地图名称001", 
+    "projectID": "6878b01fde09fc0340dfbdf6", 
+    "serverPort": 55004, 
+    "syncEnabled": true, 
+    "excludePatterns": [
+        ".vscode", 
+        ".git", 
+        "EggyAPI.lua"
+    ], 
+    "version": "1.0.0"
+}
