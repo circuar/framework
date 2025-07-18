@@ -1,2 +1,6 @@
--- 游戏启动将自动运行此文件
-print("Hello, PC Editor Lua Script!")
+local LinkedList = require("framework.collection.LinkedList")
+
+local list = LinkedList.new()
+list:pushFront(1)
+
+print(list:front())
