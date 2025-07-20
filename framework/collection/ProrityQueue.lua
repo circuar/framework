@@ -1,5 +1,4 @@
---- 生产级别游戏开发用优先级队列（PriorityQueue）实现
----@diagnostic disable: need-check-nil
+--- 优先级队列实现
 ---@class PriorityQueue
 ---@field heap any[] 堆数组存储，从索引1开始，元素为 {priority:number, value:any}
 ---@field count integer 当前元素数量
@@ -120,7 +119,7 @@ function PriorityQueue:forEach(callback)
     end
 end
 
---- 高效迭代器（层次顺序）
+--- 迭代器（层次顺序）
 ---@return fun():any?
 function PriorityQueue:iterator()
     local i = 0

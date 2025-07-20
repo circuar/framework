@@ -31,7 +31,7 @@ Stack.__index = Stack
 -- Stack.__call = function(self) return self:iterator() end
 
 --- 创建一个新的堆栈实例
----@return Stack 新的堆栈对象
+---@return Stack stack 新的堆栈对象
 function Stack.new()
     local self = setmetatable({ items = {}, count = 0 }, Stack)
     return self
@@ -70,7 +70,7 @@ function Stack:peek()
 end
 
 --- 获取当前堆栈大小
----@return integer 元素数量
+---@return integer size 元素数量
 ---@usage
 -- print(st:size())
 function Stack:size()
@@ -78,7 +78,7 @@ function Stack:size()
 end
 
 --- 判断堆栈是否为空
----@return boolean true 如果为空
+---@return boolean isEmpty true 如果为空
 ---@usage
 -- if st:isEmpty() then print("空栈") end
 function Stack:isEmpty()
@@ -96,7 +96,7 @@ function Stack:clear()
 end
 
 --- 将堆栈内容转换为数组（从底部到顶）
----@return any[] 数组（底->顶）
+---@return any[] array 数组（底->顶）
 ---@usage
 -- local arr = st:toArray()
 function Stack:toArray()
@@ -109,7 +109,7 @@ function Stack:toArray()
 end
 
 --- 遍历堆栈（从顶到底），返回迭代器
----@return function 迭代器，每次调用返回 value, index
+---@return function iterator 迭代器，每次调用返回 value, index
 ---@usage
 -- for value, idx in st:iterator() do print(idx, value) end
 function Stack:iterator()
